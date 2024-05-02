@@ -2,6 +2,8 @@
     --primary-color: #cbd5e1;
     --secondary-color: #0ea5e9;
     --main-content-bc: #f8fafc; 
+    --heading-color: #030712;
+    --shadow: 0 4px 6px rgba(0,0,0,0.5);
 }
 
 body,
@@ -24,14 +26,58 @@ html{
 .header{
     background-color: var(--main-content-bc);
     grid-area: 1/2/2/4;
+    border-bottom: 2px solid #ddd;
+    box-shadow: var(--shadow) 
 }
 
 .side-bar{
+    color: var(--main-content-bc);
     background-color: var(--secondary-color);
     grid-area: 1/1/6/2
 }
 
 .main-content{
-    background-color: var(--main-content-bc);
     grid-area: 2/2/6/4
+}
+
+h3{
+    display: flex;
+    align-items: center;
+    margin: 10px 15px;
+    margin-right: 50px;
+    font-weight: bolder;
+    padding-bottom: 30px;
+}
+
+h3 svg{
+    margin-right: 6px;
+    width: 30px;
+    height: 30px;
+    fill: var(--main-content-bc);
+}
+
+.sidebar-nav{
+    padding-bottom: 30px;
+}
+
+a{
+    display: block;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    margin: 10px 15px;
+    color: var(--main-content-bc);
+    font-weight: 600;
+    font-size: 0.8rem;
+}
+
+svg{
+    margin-right: 15px;
+    width: 20px;
+    height: 20px;
+    fill: var(--main-content-bc);
+}
+
+a:hover{
+    transform: scale(1.1);
 }
